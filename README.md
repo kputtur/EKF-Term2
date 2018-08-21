@@ -9,7 +9,7 @@ A Kalman filter is an optimal estimation algorithm used to estimate states of a 
 Kalman filter is extensively used in estimating the car position using Lidar and Radar sensors. Measurement of these sensors are not accurate as they are subject to drift or noisy. Kalman filter can be used to fuse the measurement of these sensors to find the optimal estimation of the exact position.
 
 ### 2. Background/Motivation behind Kalman Filters
-The Kalman filter was invented by Rudolf Emil K·lm·n to solve this sort of problem in a mathematically optimal way. Its first use was on the Apollo missions to the moon, and since then it has been used in an enormous variety of domains. There are Kalman filters in aircraft, on submarines, and on cruise missiles. Wall street uses them to track the market. They are used in robots, in IoT (Internet of Things) sensors, and in laboratory instruments. Chemical plants use them to control and monitor reactions. They are used to perform medical imaging and to remove noise from cardiac signals.
+The Kalman filter was invented by Rudolf Emil K√°lm√°n to solve this sort of problem in a mathematically optimal way. Its first use was on the Apollo missions to the moon, and since then it has been used in an enormous variety of domains. There are Kalman filters in aircraft, on submarines, and on cruise missiles. Wall street uses them to track the market. They are used in robots, in IoT (Internet of Things) sensors, and in laboratory instruments. Chemical plants use them to control and monitor reactions. They are used to perform medical imaging and to remove noise from cardiac signals.
 
 ### 2. How to Build This Project
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
@@ -36,7 +36,7 @@ Imagine you are in a car equipped with sensors on the outside. The car sensors c
 - ***initialize state and covariance matrices*** - the filter will initialize the bicycle's position based on the first measurement.
 - then the car will receive another sensor measurement after a time period ?t.
 - ***predict*** - the algorithm will predict where the bicycle will be after time ?t. One basic way to predict the bicycle location after ?t is to assume the bicycle's velocity is constant; thus the bicycle will have moved velocity * ?t. In the extended Kalman filter Algorithm we will assume the velocity is constant.
-- ***update**** - the filter compares the "predicted" location with what the sensor measurement says. The predicted location and the measured location are combined to give an updated location. The Kalman filter will put more weight on either the predicted location or the measured location depending on the uncertainty of each value.
+- ***update*** - the filter compares the "predicted" location with what the sensor measurement says. The predicted location and the measured location are combined to give an updated location. The Kalman filter will put more weight on either the predicted location or the measured location depending on the uncertainty of each value.
 then the car will receive another sensor measurement after a time period ?t. The algorithm then does another ***predict*** and ***update*** step.
 
 ![](./assets/4.jpg)
@@ -70,3 +70,4 @@ Taylor Series (http://mathworld.wolfram.com/TaylorSeries.html)
 We use Jacobian matrix which represents the linear mapping from polar to cartesian coordinate, applied at the update step. Hence the conversion matrix
 H becomes the Jacobian matrix (Hj).
 
+![N|Solid](https://cdn-images-1.medium.com/max/800/1*21JI6_5U7hlxwBac7Rm8LA.gif)
