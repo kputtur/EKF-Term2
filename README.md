@@ -74,7 +74,7 @@ H becomes the Jacobian matrix (Hj).
 
 
 #### References
-I am highly indebted to my previous Udacity students who created excellent articles in Udacity which made my life lot easier.
+I am highly indebted to my previous Udacity students who created excellent articles in Medium & Udacity knowledge boards which made my life lot easier.
 - https://medium.com/intro-to-artificial-intelligence/extended-kalman-filter-simplified-udacitys-self-driving-car-nanodegree-46d952fce7a3
 - https://medium.com/@tjosh.owoyemi/kalman-filter-predict-measure-update-repeat-20a5e618be66
 - https://medium.com/@mithi/object-tracking-and-fusing-sensor-measurements-using-the-extended-kalman-filter-algorithm-part-1-f2158ef1e4f0
