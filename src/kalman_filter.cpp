@@ -44,9 +44,10 @@ void KalmanFilter::Update(const VectorXd &z) {
     VectorXd z_pred = H_ * x_;
     VectorXd y = z - z_pred;
     MatrixXd Ht = H_.transpose();
-    MatrixXd S = H_ * P_ * Ht + R_;
-    MatrixXd Si = S.inverse();
+    //moved PHt calculation here -- to remove the repetition calculation later on
     MatrixXd PHt = P_ * Ht;
+    MatrixXd S = H_ * PHt + R_;
+    MatrixXd Si = S.inverse();
     MatrixXd K = PHt * Si;
 
     //new state
@@ -78,6 +79,18 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
     VectorXd z_pred(3);
     z_pred << rho, theta, ro_dot;
     VectorXd y = z - z_pred;
+
+    //Code Review comment : Perform normalization when you subtract 2 angles 
+
+    // Why ? because if you don't angle may not be in the range of -pi to +pi
+   
+    while ( y(1) > +3.1416) {
+	y(1) -= 2 * 3.1416;
+     } 
+
+   while ( y(1) < - 3.1416) {
+       y(1) += 2 * 3.1416;
+     }
 
     MatrixXd Ht = H_.transpose();
     MatrixXd S = H_ * P_ * Ht + R_;
