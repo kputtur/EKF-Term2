@@ -3,13 +3,13 @@
 ![N|Solid](https://www.mathworks.com/content/dam/mathworks/videos/u/Understanding-Kalman-Filters-Part-3-Optimal-State-Estimator.mp4/_jcr_content/renditions/S2E3_Thumbnail.jpg)
 
 
-#### 1. What is a Kalman Filter
+### 1. What is a Kalman Filter
 A Kalman filter is an optimal estimation algorithm used to estimate states of a system from indirect and uncertain measurements. A Kalman filter is only defined for linear systems. If you have a nonlinear system and want to estimate system states, you need to use a nonlinear state estimator.
 
 Kalman filter is extensively used in estimating the car position using Lidar and Radar sensors. Measurement of these sensors are not accurate as they are subject to drift or noisy. Kalman filter can be used to fuse the measurement of these sensors to find the optimal estimation of the exact position.
 
 ### 2. Background/Motivation behind Kalman Filters
-The Kalman filter was invented by Rudolf Emil K·lm·n to solve this sort of problem in a mathematically optimal way. Its first use was on the Apollo missions to the moon, and since then it has been used in an enormous variety of domains. There are Kalman filters in aircraft, on submarines, and on cruise missiles. Wall street uses them to track the market. They are used in robots, in IoT (Internet of Things) sensors, and in laboratory instruments. Chemical plants use them to control and monitor reactions. They are used to perform medical imaging and to remove noise from cardiac signals.
+The Kalman filter was invented by Rudolf Emil K√°lm√°n to solve this sort of problem in a mathematically optimal way. Its first use was on the Apollo missions to the moon, and since then it has been used in an enormous variety of domains. There are Kalman filters in aircraft, on submarines, and on cruise missiles. Wall street uses them to track the market. They are used in robots, in IoT (Internet of Things) sensors, and in laboratory instruments. Chemical plants use them to control and monitor reactions. They are used to perform medical imaging and to remove noise from cardiac signals.
 
 ### 2. How to Build This Project
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
@@ -36,7 +36,7 @@ Imagine you are in a car equipped with sensors on the outside. The car sensors c
 - ***initialize state and covariance matrices*** - the filter will initialize the bicycle's position based on the first measurement.
 - then the car will receive another sensor measurement after a time period ?t.
 - ***predict*** - the algorithm will predict where the bicycle will be after time ?t. One basic way to predict the bicycle location after ?t is to assume the bicycle's velocity is constant; thus the bicycle will have moved velocity * ?t. In the extended Kalman filter Algorithm we will assume the velocity is constant.
-- ***update**** - the filter compares the "predicted" location with what the sensor measurement says. The predicted location and the measured location are combined to give an updated location. The Kalman filter will put more weight on either the predicted location or the measured location depending on the uncertainty of each value.
+- ***update*** - the filter compares the "predicted" location with what the sensor measurement says. The predicted location and the measured location are combined to give an updated location. The Kalman filter will put more weight on either the predicted location or the measured location depending on the uncertainty of each value.
 then the car will receive another sensor measurement after a time period ?t. The algorithm then does another ***predict*** and ***update*** step.
 
 ![](./assets/4.jpg)
@@ -56,7 +56,7 @@ Where Q is the process noise covariance matrix, which is used to keep the state 
 Kalman Gain(KG): This fraction decides where to put weightage, in other words The Kalman gain tells you how much I want to change my estimate by given a measurement.
 
 
-#### EKF (Extended Kalman Filter)
+### EKF (Extended Kalman Filter)
 
 ![](./assets/3.jpg)
 
@@ -69,4 +69,16 @@ Taylor Series (http://mathworld.wolfram.com/TaylorSeries.html)
 
 We use Jacobian matrix which represents the linear mapping from polar to cartesian coordinate, applied at the update step. Hence the conversion matrix
 H becomes the Jacobian matrix (Hj).
+
+![N|Solid](https://cdn-images-1.medium.com/max/800/1*21JI6_5U7hlxwBac7Rm8LA.gif)
+
+
+#### References
+I am highly indebted to my previous Udacity students who created excellent articles in Medium & Udacity knowledge boards which made my life lot easier.
+- https://medium.com/intro-to-artificial-intelligence/extended-kalman-filter-simplified-udacitys-self-driving-car-nanodegree-46d952fce7a3
+- https://medium.com/@tjosh.owoyemi/kalman-filter-predict-measure-update-repeat-20a5e618be66
+- https://medium.com/@mithi/object-tracking-and-fusing-sensor-measurements-using-the-extended-kalman-filter-algorithm-part-1-f2158ef1e4f0
+- https://medium.com/udacity/udacity-self-driving-car-nanodegree-project-6-extended-kalman-filter-c3eac16c283d
+-https://en.wikipedia.org/wiki/Taylor_series
+- Mathworld.
 
