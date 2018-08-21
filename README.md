@@ -71,3 +71,14 @@ We use Jacobian matrix which represents the linear mapping from polar to cartesi
 H becomes the Jacobian matrix (Hj).
 
 ![N|Solid](https://cdn-images-1.medium.com/max/800/1*21JI6_5U7hlxwBac7Rm8LA.gif)
+
+
+#### References
+I am highly indebted to my previous Udacity students who created excellent articles in Udacity which made my life lot easier.
+- https://medium.com/intro-to-artificial-intelligence/extended-kalman-filter-simplified-udacitys-self-driving-car-nanodegree-46d952fce7a3
+- https://medium.com/@tjosh.owoyemi/kalman-filter-predict-measure-update-repeat-20a5e618be66
+- https://medium.com/@mithi/object-tracking-and-fusing-sensor-measurements-using-the-extended-kalman-filter-algorithm-part-1-f2158ef1e4f0
+- https://medium.com/udacity/udacity-self-driving-car-nanodegree-project-6-extended-kalman-filter-c3eac16c283d
+-https://en.wikipedia.org/wiki/Taylor_series
+- Mathworld.
+
