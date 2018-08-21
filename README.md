@@ -3,7 +3,7 @@
 ![N|Solid](https://www.mathworks.com/content/dam/mathworks/videos/u/Understanding-Kalman-Filters-Part-3-Optimal-State-Estimator.mp4/_jcr_content/renditions/S2E3_Thumbnail.jpg)
 
 
-#### 1. What is a Kalman Filter
+### 1. What is a Kalman Filter
 A Kalman filter is an optimal estimation algorithm used to estimate states of a system from indirect and uncertain measurements. A Kalman filter is only defined for linear systems. If you have a nonlinear system and want to estimate system states, you need to use a nonlinear state estimator.
 
 Kalman filter is extensively used in estimating the car position using Lidar and Radar sensors. Measurement of these sensors are not accurate as they are subject to drift or noisy. Kalman filter can be used to fuse the measurement of these sensors to find the optimal estimation of the exact position.
@@ -56,7 +56,7 @@ Where Q is the process noise covariance matrix, which is used to keep the state 
 Kalman Gain(KG): This fraction decides where to put weightage, in other words The Kalman gain tells you how much I want to change my estimate by given a measurement.
 
 
-#### EKF (Extended Kalman Filter)
+### EKF (Extended Kalman Filter)
 
 ![](./assets/3.jpg)
 
